@@ -1,0 +1,29 @@
+{{ form_start(formBook, {attr: {class: 'form '}}) }}
+<div class="row">
+    <div class="col-lg-4 col-md-6 form-group">
+        {{ form_widget(formBook.name) }}
+    </div>
+    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+        {{ form_widget(formBook.email) }}
+    </div>
+    <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+        {{ form_widget(formBook.phone) }}
+    </div>
+    <div class="col-lg-4 col-md-6 form-group mt-3">
+        {{ form_widget(formBook.dateAt) }}
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 form-group mt-3" id="timepicker">
+        {{ form_widget(formBook.timeAt) }}
+    </div>
+    <div class="col-lg-4 col-md-6 form-group mt-3">
+        {{ form_widget(formBook.people) }}
+    </div>
+</div>
+<div class="form-group mt-3">
+    {{ form_widget(formBook.message) }}
+</div>
+<div class="text-center mt-3"><button type="submit">Book a Table</button></div>
+{{ form_end(formBook) }}
